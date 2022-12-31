@@ -1,0 +1,9 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Lee"
+  given-names: "GinWook"
+title: "YouTube Downloader"
+version: 1.0.0
+date-released: 2022-12-31
+url: "https://github.com/git-ginwook/youTubeDownloader"
