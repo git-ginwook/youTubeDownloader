@@ -63,9 +63,6 @@ if count == 1:
         else:
             print("paste the YouTube URL.")
 
-# read YouTubeList.txt file
-urlList = open("YouTubeList.txt", 'r')
-
 # download audio
 if form == 1:
     # download a single file
@@ -73,7 +70,11 @@ if form == 1:
         audioDL(singleURL)
     # download multiple files
     else:
+        # read YouTubeList.txt file
+        urlList = open("YouTubeList.txt", 'r')
         [audioDL(url) for url in urlList]
+        # close YouTubeList.txt file
+        urlList.close()
 
 # download video
 else:
@@ -82,7 +83,8 @@ else:
         videoDL(singleURL)
     # download multiple files
     else:
+        # read YouTubeList.txt file
+        urlList = open("YouTubeList.txt", 'r')
         [videoDL(url) for url in urlList]
-
-# close YouTubeList.txt file
-urlList.close()
+        # close YouTubeList.txt file
+        urlList.close()
