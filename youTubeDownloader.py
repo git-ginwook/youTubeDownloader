@@ -1,4 +1,8 @@
 import pafy
+import os
+
+# specify download folder to 'Downloads'
+path = os.path.expanduser("~")+"/Downloads/"
 
 
 # download audio only
@@ -7,7 +11,7 @@ def audioDL(url):
     print(target.title)
     best_audio = target.getbestaudio(preftype="m4a")
     print(best_audio.bitrate, best_audio.extension, best_audio.get_filesize())
-    best_audio.download(filepath="/Users/ginwooklee_air/Downloads")
+    best_audio.download(filepath=path)
 
 
 # download video
@@ -16,7 +20,7 @@ def videoDL(url):
     print(target.title)
     best_video = target.getbest()
     print(best_video.resolution, best_video.extension)
-    best_video.download(filepath="/Users/ginwooklee_air/Downloads")
+    best_video.download(filepath=path)
 
 
 # ask user whether to download audio or video
