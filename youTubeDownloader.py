@@ -1,6 +1,3 @@
-# source reference: https://www.geeksforgeeks.org/youtube-mediaaudio-download-using-python-pafy/
-# pafy documentation: https://pythonhosted.org/pafy/index.html?highlight=save
-# note: backend_youtube_dl.py line 53 and 54 updated (https://github.com/mps-youtube/pafy/pull/288)
 import pafy
 
 
@@ -13,7 +10,7 @@ def audioDL(url):
     best_audio.download(filepath="/Users/ginwooklee_air/Downloads")
 
 
-# download video and audio
+# download video
 def videoDL(url):
     target = pafy.new(url)
     print(target.title)
@@ -65,19 +62,23 @@ if count == 1:
 # read YouTubeList.txt file
 urlList = open("YouTubeList.txt", 'r')
 
-
+# download audio
 if form == 1:
+    # download a single file
     if count == 1:
         audioDL(singleURL)
+    # download multiple files
     else:
         [audioDL(url) for url in urlList]
 
+# download video
 else:
+    # download a single file
     if count == 1:
         videoDL(singleURL)
+    # download multiple files
     else:
         [videoDL(url) for url in urlList]
 
 # close YouTubeList.txt file
 urlList.close()
-
