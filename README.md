@@ -3,9 +3,10 @@
 - Download YouTube video or audio using `youTubeDownloader.py`
 - Use a text editor (e.g., .txt) to list up multiple YouTube URLs for download
 ## Installation
-Install pafy using `pip`
+Install `pafy`(ver.0.5.5) and `youtube-dl`(ver.2021.12.17)
 ```
 pip install pafy
+pip install youtube_dl
 ```
 The current `pafy` throws [an error](https://github.com/mps-youtube/pafy/pull/288) 
 when given YouTube URL has zero 'like' or 'dislike'.<br>
